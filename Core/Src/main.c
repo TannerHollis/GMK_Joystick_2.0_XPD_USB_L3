@@ -454,11 +454,17 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
-  /*Configure GPIO pins : BUTTON0_Pin BUTTONJYSTK_Pin */
-  GPIO_InitStruct.Pin = BUTTON0_Pin|BUTTONJYSTK_Pin;
+  /*Configure GPIO pin : BUTTON0_Pin */
+  GPIO_InitStruct.Pin = BUTTON0_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(BUTTON0_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : BUTTONJYSTK_Pin */
+  GPIO_InitStruct.Pin = BUTTONJYSTK_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(BUTTONJYSTK_GPIO_Port, &GPIO_InitStruct);
 
 }
 
