@@ -37,8 +37,8 @@ const USBD_DescriptionType hdev_cfg = {
         .ID             = 0x0483,
     },
     .Product = {
-        .Name           = "GMK Joystick",
-        .ID             = 0x5750,
+        .Name           = "GMK Joystick w/ L3",
+        .ID             = 0x5751,
         .Version.bcd    = 0x0100,
     },
     .Config = {
